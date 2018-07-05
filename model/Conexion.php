@@ -1,0 +1,36 @@
+<?php
+define("ONLINE", false);
+
+class Conexion {
+
+    private $mysql;
+    private $bdName;
+    private $user;
+    private $pass;
+    
+    public function __construct() {
+        $this->bdName = "examenes";
+        $this->user = "root";
+        $this->pass = "123456";
+    }
+
+    public function conectar() {
+        $this->mysql = new mysqli(
+                "localhost", $this->user, $this->pass, $this->bdName
+        );
+
+        if (mysqli_connect_errno()) {
+            printf("Error de conexión: %s\n", mysqli_connect_error());
+            exit();
+        }
+    }
+
+    public function ejecutar($query) {
+        return $this->mysql->query($query);
+    }
+
+    public function desconectar() {
+        $this->mysql->close();
+    }
+
+}
