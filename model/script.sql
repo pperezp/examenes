@@ -73,7 +73,7 @@ DELIMITER ;
 /* Obtener la información de un examen según fecha e ID de ramo*/
 
 
-/*Obtener la información de Todos los examenes según fecha*/
+/*Obtener la información de Todos los exámenes según fecha*/
 DELIMITER $$
 CREATE PROCEDURE getExamenes(
 	mes INT,
@@ -94,7 +94,7 @@ CREATE PROCEDURE getExamenes(
         e.fecha ASC;
 END $$
 DELIMITER ;
-/*Obtener la información de Todos los examenes según fecha*/
+/*Obtener la información de Todos los exámenes según fecha*/
 
 
 

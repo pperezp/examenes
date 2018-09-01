@@ -30,8 +30,8 @@ class Data{
     }
 
     /*
-    $mes = mes de inicio de examenes
-    $anio = año de inicio de examenes
+    $mes = mes de inicio de exámenes
+    $anio = año de inicio de exámenes
     */
     public function getExamenes($mes, $anio){
         $query = "CALL getExamenes($mes, $anio)";
